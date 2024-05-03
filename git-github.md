@@ -23,7 +23,7 @@ StorageType: ```store``` (pemanente) or ```cache``` (only stored in cache)
 ``` git config --global credential.helper <storageType> ```
 ``` git config credential.helper <storageType> ```
 
-## Make new local repository
+## Make NEW LOCAL repository
 
 #### Make new folder to init repository on
 ```mkdir <projectFolderAddress>```
@@ -40,7 +40,7 @@ StorageType: ```store``` (pemanente) or ```cache``` (only stored in cache)
 
 ``` git remote add origin <remoteRepositoryURL> ```
 
-## Clone existent repository from GitHub (for example)
+## Clone EXISTENT repository
 
 1- Get the URL of the remote repository
 2- Clone the remote repository to your PC
@@ -58,7 +58,7 @@ You can also clone a just a single branch from the remote repository
 
 If the branch name to be cloned is not especified in the command it will clone the ```main``` or ```master``` branch (whichever is the main branch of the repository)
 
-## Showing different types of information on Git
+## Showing information
 
 #### Status
 You can see the branch status (preparation area status) if you want with
@@ -78,32 +78,37 @@ This give us the commit hash (unique to the especifique commit), its autor and d
 #### More detailed history of commits
 ```git reflog```
 
-## Adding and commiting changes
+## ADD (STAGE) changes
+Add changes you made to the staged area
 
-1- Add (stage) all the changes you made to the project
+#### Add (stage) all the changes you made
 ``` git add . ```
-or add (stage) the changes made in a specifique file
+#### Add (stage) the changes made in a specifique file
 ``` git add <fileName> ```
 
-2 - Then commit those changes with a descritive message
+## COMMIT changes
+Commit all the added (staged) changes with a descritive message
 ``` git commit -m "message" ```
 
 ## Undo commands
 
-## Undo last commit message
+#### Undo last commit message
 Edit the commit message in the command itself
 ``` git commit --amend -m "new message" ```
 Opens a commit editor where you use vim to edit the message
 ```git commit --amend```
 
-## Undo NOT ADDED CHANGES in LOCAL repository
+#### Undo NOT ADDED changes in LOCAL repository (UNSTAGE)
 Discards all not added (staged) changes, after use the discarted changes cannot be recuperated
 ```git restore <fileName>```
 
-## Undo ADDED CHANGES in LOCAL repository
+#### Undo ADDED (STAGED) changes in LOCAL repository
+Undo all added (staged) changes
+```git reset .```
+Undo all added (staged) changes in specified file
 ```git reset <fileName>```
 
-## Undo COMMIT in LOCAL repository
+#### Undo COMMIT in LOCAL repository
 Resturns to earlier specified (by its Hash code) commit
 
 Returns to the especified commit and untages all changes made after
@@ -118,13 +123,18 @@ Returns to the especified commit and untages all changes made after (default opt
 Returns to the especified commit and discards all changes made after
 ``` git reset --hard <commitHash> ```
 
-## Sending your changes to REMOTE repository
+## PULL changes to REMOTE
 
 1-  Push (get) all the changes that occurred in the remote repository since your last push and resolve any conflits that appear
 ``` git push ```
 
 2- Then pull (send) your commited changes to the remote repository
 ``` git pull ```
+
+## PUSH changes from REMOTE
+
+Push (get) all the changes that occurred in the remote repository since your last push
+``` git push ```
 
 ## Branch manipulations
 
@@ -158,3 +168,5 @@ w => write
 q => exit
 
 *Depending on model, version and configuration of your git and IDE, if your Git is vinculated to a IDE it opens the commit in a git commit file in your IDE, this file can be normally edited and changes you take effect when closed.
+
+testing reset
