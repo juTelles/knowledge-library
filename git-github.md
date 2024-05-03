@@ -56,7 +56,7 @@ If you want the folder to have another name
 You can also clone a just a single branch from the remote repository
 ``` git clone <remoteRepositoryURL> --branch <branchName(optional)> --singleBranch ```
 
-If the branch name to be cloned is not especified in the command it will clone the ```main``` or ```master``` branch (whichever is the main branch of the repository)
+If the branch name to be cloned is not especified in the command it will clone ONLY the ```main``` or ```master``` branch (whichever is the main branch of the repository)
 
 ## Showing information
 
@@ -77,6 +77,9 @@ This give us the commit hash (unique to the especifique commit), its autor and d
 
 #### More detailed history of commits
 ```git reflog```
+
+#### Show differences between branchs
+```git diff <branchName> <branchName2>```
 
 ## ADD (STAGE) changes
 Add changes you made to the staged area
