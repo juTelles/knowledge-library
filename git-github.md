@@ -94,11 +94,11 @@ Edit the commit message in the command itself
 Opens a commit editor where you use vim to edit the message
 ```git commit --amend```
 
-## Undo changes in LOCAL repository
-descards all changes, after use the changes cannot be recuperated
+## Undo CHANGES in LOCAL repository
+Discards all not commited changes, after use the discarted changes cannot be recuperated
 ```git restore <fileName.fileExtension>```
 
-## Undo changes in LOCAL repository
+## Undo COMMIT in LOCAL repository
 ``` git reset ```
 ``` git reset --soft ```
 ``` git reset --mixed ```
@@ -139,6 +139,8 @@ Git won't recoganize empty folders as commitable changes, so files named .gitKee
 
 #### using vim editor
 Press ```i``` to edit
-Press esc and write ```:wq``` to write (save) and exit
+Press ESC and write ```:wq``` to write (save) and exit
 w => write
 q => exit
+
+*Depending on model, version and configuration of your git and IDE, if your Git is vinculated to a IDE it opens the commit in a git commit file in your IDE, this file can be normally edited and changes you take effect when closed.
