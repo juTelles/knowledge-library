@@ -96,15 +96,27 @@ Edit the commit message in the command itself
 Opens a commit editor where you use vim to edit the message
 ```git commit --amend```
 
-## Undo CHANGES in LOCAL repository
-Discards all not commited changes, after use the discarted changes cannot be recuperated
-```git restore <fileName.fileExtension>```
+## Undo NOT ADDED CHANGES in LOCAL repository
+Discards all not added (staged) changes, after use the discarted changes cannot be recuperated
+```git restore <fileName>```
+
+## Undo ADDED CHANGES in LOCAL repository
+```git reset <fileName>```
 
 ## Undo COMMIT in LOCAL repository
-``` git reset ```
-``` git reset --soft ```
-``` git reset --mixed ```
-``` git reset --hard ```
+Resturns to earlier specified (by its Hash code) commit
+
+Returns to the especified commit and untages all changes made after
+``` git reset <commitHash> ```
+
+Returns to the especified commit and stages (adds) all changes made after
+``` git reset --soft <commitHash> ```
+
+Returns to the especified commit and untages all changes made after (default option - the same as git reset)
+``` git reset --mixed <commitHash> ```
+
+Returns to the especified commit and discards all changes made after
+``` git reset --hard <commitHash> ```
 
 ## Sending your changes to REMOTE repository
 
