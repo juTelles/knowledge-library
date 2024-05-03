@@ -58,7 +58,7 @@ You can also clone a just a single branch from the remote repository
 
 If the branch name to be cloned is not especified in the command it will clone the ```main``` or ```master``` branch (whichever is the main branch of the repository)
 
-## Seeing different types of information on Git
+## Showing different types of information on Git
 
 #### Status
 You can see the branch status (preparation area status) if you want with
@@ -74,6 +74,9 @@ Author: userName <userEmail>
 Date:   Thu May 2 23:00:33 2024 -0300`
 ```
 This give us the commit hash (unique to the especifique commit), its autor and date
+
+#### More detailed history of commits
+```git reflog```
 
 ## Adding and commiting changes
 
