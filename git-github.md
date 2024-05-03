@@ -1,9 +1,11 @@
 # Git and GitHub basics
 
+#### Documentation
+[Git DOCS](https://git-scm.com/docs)
+[GitHub DOCS](https://docs.github.com/en)
 
 ## Config Git
 use `--global` for global configurations (whole pc) and nothing for user configurations
-
 
 #### Config git user name
 
@@ -107,7 +109,7 @@ If the branch name to be cloned is not specified in the command it will clone ON
 
 
 #### Status
-You can see the branch status (preparation area status) if you want with
+You can see the branch status (working directory status) if you want with
 
 
 ``` git status ```
@@ -353,23 +355,23 @@ From inside the branch you can merge it with another branch
 ## Additional information
 
 
-#### STASH
+## STASH
 
 
-## STASH changes
-Saves changes in a place apart and takes them out of stage area
+#### STASH changes
+Records changes and cleans working directory (reverts changes)
 
 
 ```git stash```
 
 
-## Lists all stashes made
+#### Lists all stashes made
 
 
 ```git stash list```
 
 
-## Apply chosen STASH
+#### Apply STASH
 applies last stashed changes and maintains stash in the list
 
 
