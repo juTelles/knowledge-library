@@ -161,9 +161,42 @@ If later you wante to actually merge the content fetched with you local reposito
 ``` git branch -d <branchName> ```
 
 #### See last commit in a branch
+lists lasts commits of each branch
 ``` git branch -v ```
 
+## MERGE in LOCAL
+From inside the branch you can merge it with another branch
+```git merge <branchName>```
+
+## First PUSH of the LOCAL to the REMOTE repository
+
+1- Configure the remote repository
+```git remote add origin <remoteURL>```
+
+2- If in a branch called master force it to be renamed as main
+```git branch -M main```
+
+2- Push (get) all the changes that occurred in the remote repository since your last push
+``` git push -u origin main```
+
+*```-u``` is abreviation for upstream, it tells git to config the remote branch main of the remote repository origin as the upstream branch for are local branch main
+
 ## Additional information
+
+#### STASH
+
+## STASH changes
+Saves changes in a place apart and takes them out of stage area
+```git stash```
+
+## Lists all stashs made
+```git stash list```
+
+## Aplly chosen STASH
+apllies last stashed changes and maintains stash in the list
+```git stash apply```
+apllies last stashed changes and removes from the list
+```git stash pop```
 
 #### gitKeep
 Git won't recoganize empty folders as commitable changes, so files named .gitKeep, are empty files named that way as a convenction to sinalize e make it commitable a empty folder
