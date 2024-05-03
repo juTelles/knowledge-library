@@ -129,18 +129,25 @@ Returns to the especified commit and untages all changes made after (default opt
 Returns to the especified commit and discards all changes made after
 ``` git reset --hard <commitHash> ```
 
-## PULL changes to REMOTE
+## PUSH changes to REMOTE
 
-1-  Push (get) all the changes that occurred in the remote repository since your last push and resolve any conflits that appear
-``` git push ```
+1- First PULL (get) all the changes that occurred in the remote repository since your last pull and resolve any conflits that appear
+```git pull```
 
-2- Then pull (send) your commited changes to the remote repository
-``` git pull ```
+#### PUSH changes
+2- Then PUSH (send) your commited changes to the remote repository
+``` git push <remoteName> <branchName>```
 
-## PUSH changes from REMOTE
+## PULL changes from REMOTE
+PULL (get) all the changes that occurred in the remote repository since your last pull
+```git pull```
 
-Push (get) all the changes that occurred in the remote repository since your last push
-``` git push ```
+## FETCH
+Downloads all the content of the remote repository without merging this content with you local content, makes a remote/local branch that contains this content
+```git fetch origin <branchName>```
+
+If later you wante to actually merge the content fetched with you local repository you can merge them
+```git merge origin/<branchName>```
 
 ## Branch manipulations
 
