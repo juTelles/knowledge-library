@@ -98,20 +98,26 @@ Edit the commit message in the command itself
 Opens a commit editor where you use vim to edit the message
 ```git commit --amend```
 
-#### Undo NOT ADDED changes in LOCAL repository (UNSTAGE)
+#### Undo NOT ADDED (NOT STAGED) changes in LOCAL repository
 Discards all not added (staged) changes, after use the discarted changes cannot be recuperated
 ```git restore <fileName>```
 
-#### Undo ADDED (STAGED) changes in LOCAL repository
+#### Undo ADDED changes in LOCAL repository (UNSTAGE)
 Undo all added (staged) changes
 ```git reset .```
+or
+```git restore --staged .```
+
 Undo all added (staged) changes in specified file
 ```git reset <fileName>```
+or
+```git restore --staged  <fileName>```
+
 
 #### Undo COMMIT in LOCAL repository
 Resturns to earlier specified (by its Hash code) commit
 
-Returns to the especified commit and untages all changes made after
+Returns to the especified commit and unstages all changes made after
 ``` git reset <commitHash> ```
 
 Returns to the especified commit and stages (adds) all changes made after
@@ -168,5 +174,3 @@ w => write
 q => exit
 
 *Depending on model, version and configuration of your git and IDE, if your Git is vinculated to a IDE it opens the commit in a git commit file in your IDE, this file can be normally edited and changes you take effect when closed.
-
-testing reset
