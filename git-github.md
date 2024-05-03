@@ -58,18 +58,45 @@ You can also clone a just a single branch from the remote repository
 
 If the branch name to be cloned is not especified in the command it will clone the ```main``` or ```master``` branch (whichever is the main branch of the repository)
 
-## Adding and commiting changes
+## Seeing different types of information on Git
 
-*You can see the branch status (preparation area status) if you want with
+#### Status
+You can see the branch status (preparation area status) if you want with
 ``` git status ```
 
-1- Add all the changes you want to commit
-``` git add ```
+#### Commit logs
+``` git log ```
+
+Output Example:
+```
+commit 41cd38e227acfb1a5c7847329fd3172d062b9dc0 (HEAD -> master)
+Author: userName <userEmail>
+Date:   Thu May 2 23:00:33 2024 -0300`
+```
+This give us the commit hash (unique to the especifique commit), its autor and date
+
+## Adding and commiting changes
+
+
+1- Add all the changes you made to the project
+``` git add . ```
+or add the changes made in a specifique file
+``` git add <fileName.fileExtencion> ```
+
 2 - Then commit those changes with a descritive message
 ``` git commit -m "message" ```
 
-#### Undo last commit message
+## Undo commands
+
+## Undo last commit message
+Edit the commit message in the command itself
 ``` git commit --amend -m "new message" ```
+Opens a commit editor where you use vim to edit the message
+```git commit --amend```
+
+## Undo changes in LOCAL repository
+descards all changes, after use the changes cannot be recuperated
+```git restore <fileName.fileExtension>```
 
 ## Undo changes in LOCAL repository
 ``` git reset ```
@@ -98,3 +125,20 @@ If the branch name to be cloned is not especified in the command it will clone t
 
 #### See last commit in a branch
 ``` git branch -v ```
+
+## Additional information
+
+#### gitKeep
+Git won't recoganize empty folders as commitable changes, so files named .gitKeep, are empty files named that way as a convenction to sinalize e make it commitable a empty folder
+
+#### Delete Git repository from folder
+1- Go into the folder you want not to be a Git repository anymore
+``` cd <folderAddress>```
+2- Remove the .git file from the folder
+```rm -rf .git```
+
+#### using vim editor
+Press ```i``` to edit
+Press esc and write ```:wq``` to write (save) and exit
+w => write
+q => exit
