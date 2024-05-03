@@ -77,11 +77,10 @@ This give us the commit hash (unique to the especifique commit), its autor and d
 
 ## Adding and commiting changes
 
-
-1- Add all the changes you made to the project
+1- Add (stage) all the changes you made to the project
 ``` git add . ```
-or add the changes made in a specifique file
-``` git add <fileName.fileExtencion> ```
+or add (stage) the changes made in a specifique file
+``` git add <fileName> ```
 
 2 - Then commit those changes with a descritive message
 ``` git commit -m "message" ```
